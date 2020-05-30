@@ -9,7 +9,9 @@ main() #calling the main function
 
 
 
+
 ##   Variables  ##
+print("\n\nVariables:")
 # Declare a variable and initialize it
 f =0
 print(f)
@@ -26,6 +28,7 @@ print("This is a string " + str(123) )
 
 
 ##  Fucntions ##
+print("\n\nFucntions:")
 # function that takes arguments
 def printArgs(arg1,arg2):
     print(arg1,arg2)
@@ -44,7 +47,35 @@ def power(num, x=1):
     for i in range(x):
         result = result * num
     return result
+
+#function with vaiable number of arguments
+def multi_add(*args):   # '*' means we can pass in variable number of arguments   
+    result = 0 
+    for x in args:
+        result = result + x
+    return result
+
 # examples printing function with default value for an argument
 print(power(2))  # here x=1(default value) and 2^1 is printed
 print(power(2,3)) # here x=3 and 2^3 is printed
 print(power(x=3,num=2)) # this also works as arguments are passed with values and python interpreter figures which arugments to supply the value to 
+print(multi_add(2,4,6,7,3))
+
+
+
+## Conditionals ## 
+print("\n\nConditional:")
+x, y = 100, 100
+
+# conditional flow uses if, elif, else  
+if(x < y):
+    st = "x is less than y"
+elif(x == y):
+    st = "x is the same as y"
+else:
+    st ="x is greater than y"
+print(st)
+
+# python doesn't have switch cases
+
+
