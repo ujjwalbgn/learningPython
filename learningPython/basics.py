@@ -27,6 +27,16 @@ print("This is a string " + str(123) )
 
 
 
+## Array ##
+print("\n\nArrays")
+days = ["Mon","Tue","Wed","Thu","Fri","Sat"]
+print(days)  # this will print arrays in array format
+
+#printing all elements of an array
+for d in days: 
+    print(d)
+
+
 ##  Fucntions ##
 print("\n\nFucntions:")
 # function that takes arguments
@@ -79,3 +89,29 @@ print(st)
 # python doesn't have switch cases
 
 
+
+## Loops ##
+print("\n\nLoops")
+# python only has for and while loop
+
+# define a while loop
+x = 0
+while(x <5):
+    print(x)
+    x+=1  # there is no x++ operater in python
+
+# define a for loop
+for x in range(5,10):
+    print(x)
+
+# use the break and continue statements
+for x in range(5,30):
+    #if (x == 7): break  # when x ==7 loop will end and next block of code will execute 
+    if (x %2 == 0) : continue # when x == even number, loop will go back to start and run again ignoring the even numbers and only printing odd numbers
+    print(x)
+
+#using the enumerate() function to get index 
+days = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"]
+
+for i,d in enumerate(days):
+    print(i,d)
